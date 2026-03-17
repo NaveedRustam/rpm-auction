@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\StarterKitPageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,4 +56,9 @@ Route::controller(LegacyDataController::class)->group(function () {
     Route::get('app-assets/data/ajax.php', 'datatablesAjax')->name('legacy.app-assets.ajax');
     Route::get('app-assets/data/fullcalendar/php/get-events.php', 'fullCalendarEvents')->name('legacy.fullcalendar.events');
     Route::get('app-assets/data/fullcalendar/php/get-timezones.php', 'fullCalendarTimezones')->name('legacy.fullcalendar.timezones');
+});
+
+Route::controller(StarterKitPageController::class)->prefix('starter-kit')->group(function () {
+    Route::get('page-1', 'pageOne')->name('starter-kit.page-1');
+    Route::get('page-2', 'pageTwo')->name('starter-kit.page-2');
 });
