@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Login - RPM Auction</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,25 +27,37 @@
                     <p class="text-center fw-bold" style="color: gray; font-size: 18px;">Welcome back to <span
                             style="color: #912940;">Salvage Auction</span>
                     </p>
-                    <form class="mt-4">
+                    <x-auth-session-status class="mb-3" :status="session('status')" />
+                    <form class="mt-4" method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="mb-3">
-                            <label for="Email" style="font-size: 13px;">Email</label>
-                            <input type="email" style="font-size: 12px;"
-                                class="form-control bg-light rounded-0 border-0" placeholder="Email">
+                            <label for="email-desktop" style="font-size: 13px;">Email</label>
+                            <input id="email-desktop" type="email" name="email" style="font-size: 12px;"
+                                class="form-control bg-light rounded-0 border-0 @error('email') is-invalid @enderror"
+                                placeholder="Email" value="{{ old('email') }}" required autofocus autocomplete="username">
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="Password" style="font-size: 13px;">Password</label>
-                            <input type="password" class="form-control bg-light rounded-0 border-0"
-                                placeholder="Password">
+                            <label for="password-desktop" style="font-size: 13px;">Password</label>
+                            <input id="password-desktop" type="password" name="password"
+                                class="form-control bg-light rounded-0 border-0 @error('password') is-invalid @enderror"
+                                placeholder="Password" required autocomplete="current-password">
+                            @error('password')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="remember">
-                                <label class="form-check-label" style="font-size: 11px;" for="remember">Remember
+                                <input type="checkbox" class="form-check-input" id="remember-desktop" name="remember">
+                                <label class="form-check-label" style="font-size: 11px;" for="remember-desktop">Remember
                                     Me</label>
                             </div>
-                            <a href="#" class="text-decoration-none text-dark small" style="font-size: 11px;">Forgot
-                                Password?</a>
+                            @if (Route::has('password.request'))
+                                <a href="{{ route('password.request') }}" class="text-decoration-none text-dark small"
+                                    style="font-size: 11px;">Forgot Password?</a>
+                            @endif
                         </div>
                         <button type="submit" class="btn w-100 text-white mt-5 mb-4 rounded-0"
                             style="background-color:#912940">
@@ -66,25 +78,37 @@
                     <p class="text-center fw-bold" style="color: gray; font-size: 18px;">
                         Welcome back to <span style="color: #912940;">Salvage Auction</span>
                     </p>
-                    <form class="mt-4">
+                    <x-auth-session-status class="mb-3" :status="session('status')" />
+                    <form class="mt-4" method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="mb-3">
-                            <label for="Email" style="font-size: 13px;">Email</label>
-                            <input type="email" style="font-size: 12px;"
-                                class="form-control bg-light rounded-0 border-0" placeholder="Email">
+                            <label for="email-mobile" style="font-size: 13px;">Email</label>
+                            <input id="email-mobile" type="email" name="email" style="font-size: 12px;"
+                                class="form-control bg-light rounded-0 border-0 @error('email') is-invalid @enderror"
+                                placeholder="Email" value="{{ old('email') }}" required autocomplete="username">
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="Password" style="font-size: 13px;">Password</label>
-                            <input type="password" class="form-control bg-light rounded-0 border-0"
-                                placeholder="Password">
+                            <label for="password-mobile" style="font-size: 13px;">Password</label>
+                            <input id="password-mobile" type="password" name="password"
+                                class="form-control bg-light rounded-0 border-0 @error('password') is-invalid @enderror"
+                                placeholder="Password" required autocomplete="current-password">
+                            @error('password')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="remember">
-                                <label class="form-check-label" style="font-size: 11px;" for="remember">Remember
+                                <input type="checkbox" class="form-check-input" id="remember-mobile" name="remember">
+                                <label class="form-check-label" style="font-size: 11px;" for="remember-mobile">Remember
                                     Me</label>
                             </div>
-                            <a href="#" class="text-decoration-none text-dark small" style="font-size: 11px;">Forgot
-                                Password?</a>
+                            @if (Route::has('password.request'))
+                                <a href="{{ route('password.request') }}" class="text-decoration-none text-dark small"
+                                    style="font-size: 11px;">Forgot Password?</a>
+                            @endif
                         </div>
 
                         <button type="submit" class="btn w-100 text-white mt-5 mb-4 rounded-0"
