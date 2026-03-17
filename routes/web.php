@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LegacyDataController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -40,30 +41,18 @@ Route::middleware('auth')->group(function () {
 });
 require __DIR__ . '/auth.php';
 
-Route::get('/', function () {
-    return view('banners.home');
-})->name('home');
-Route::get('/auctions', function () {
-    return view('banners.acutions');
-})->name('auctions');
-Route::get('/salvage', function () {
-    return view('banners.salvage');
-})->name('salvage');
-Route::get('/drive', function () {
-    return view('banners.drive');
-})->name('drive');
-Route::get('/about', function () {
-    return view('banners.about');
-})->name('about');
-Route::get('/contact', function () {
-    return view('banners.contact');
-})->name('contact');
+Route::controller(PageController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/auctions', 'auctions')->name('auctions');
+    Route::get('/salvage', 'salvage')->name('salvage');
+    Route::get('/drive', 'drive')->name('drive');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/contact', 'contact')->name('contact');
+});
 
-Route::get('/login', function () {
-    return view('rpmlogin.login');
-})->name('login');
-
-
-
-
-
+Route::controller(LegacyDataController::class)->group(function () {
+    Route::get('assets/json/ajax.php', 'datatablesAjax')->name('legacy.datatables.ajax');
+    Route::get('app-assets/data/ajax.php', 'datatablesAjax')->name('legacy.app-assets.ajax');
+    Route::get('app-assets/data/fullcalendar/php/get-events.php', 'fullCalendarEvents')->name('legacy.fullcalendar.events');
+    Route::get('app-assets/data/fullcalendar/php/get-timezones.php', 'fullCalendarTimezones')->name('legacy.fullcalendar.timezones');
+});

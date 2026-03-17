@@ -26,7 +26,7 @@
         </div> -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         <img style="height: 50px;" src="{{asset('images/logo3.png')}}"
                             alt="logo">
                     </a>

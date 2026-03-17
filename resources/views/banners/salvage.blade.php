@@ -71,7 +71,7 @@
 
     <!-- Hero Large Photos -->
 
-    <a href="{{asset('drive')}}" class="text-decoration-none text-dark d-block mx-3 pe-5">
+    <a href="{{ route('drive') }}" class="text-decoration-none text-dark d-block mx-3 pe-5">
         <div class="container-fluid d-none d-lg-block lgpad">
             <div class="row g-0">
                 <!-- Left Side (Main Image) -->
@@ -113,7 +113,7 @@
 
 
     <!-- Hero Small Screen Photos -->
-    <a href="{{asset('drive')}}" class="text-decoration-none text-dark d-block mx-3 pe-5">
+    <a href="{{ route('drive') }}" class="text-decoration-none text-dark d-block mx-3 pe-5">
         <div class="container-fluid d-block d-lg-none no-scroll-shadow">
             <div class="row flex-nowrap g-0 mt-3 gallery-row">
                 <div class="col-6">
@@ -1047,7 +1047,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1081,7 +1081,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1115,7 +1115,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1147,7 +1147,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1183,7 +1183,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1217,7 +1217,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1251,7 +1251,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
 
@@ -1283,7 +1283,7 @@
                             </div>
 
                             <!-- Full clickable link -->
-                            <a href="{{asset('drive')}}" class="stretched-link"></a>
+                            <a href="{{ route('drive') }}" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -1318,7 +1318,7 @@
                         </div>
 
                         <!-- Full clickable link -->
-                        <a href="{{asset('drive')}}" class="stretched-link"></a>
+                        <a href="{{ route('drive') }}" class="stretched-link"></a>
                     </div>
                 </div>
 
@@ -1364,7 +1364,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1404,7 +1404,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1450,7 +1450,7 @@
                                 <p class="card-text small">532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1498,7 +1498,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1542,7 +1542,7 @@
                                 <p class="card-text small">532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1590,7 +1590,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1634,7 +1634,7 @@
                                 <p class="card-text small">532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1682,7 +1682,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -1731,7 +1731,7 @@
                                     532-hp Hybrid Turbo Flat-6, AWD, Highly Equipped <br>
                                     <span class="text-muted">King Of Prussia, PA 19406</span>
                                 </p>
-                                <a href="{{asset('drive')}}" class="stretched-link"></a>
+                                <a href="{{ route('drive') }}" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>

@@ -1449,7 +1449,7 @@
         </div>
     </section> --}}
     <section class="faq-section py-lg-4"
-        style="background-image: url('http://127.0.0.1:8000/images/sidebg.png'); background-repeat: no-repeat; background-size:contain; background-color: rgb(255,255,255); background-size:50%50%; ">
+        style="background-image: url('{{ asset('images/sidebg.png') }}'); background-repeat: no-repeat; background-size:contain; background-color: rgb(255,255,255); background-size:50%50%; ">
         <div class="  mx-2 px-2 mx-sm-3 px-sm-3 mx-lg-5 px-lg-5"  data-aos="fade-up">
             <h2 class="fw-semibold bt1 d-inline">Frequently Asked</h2>
             <h2 class="d-inline fst-italic ms-1 font1">Questions</h2>
